@@ -1,0 +1,93 @@
+h1 {
+    font-size: 5vw;
+    color: #437066;
+    text-align: center;
+    margin-top: 30px;
+    font-family: "Alegreya", serif;
+}
+
+
+p {
+    font-size: 1.5vw;
+    color: #000000;    
+    font-family: "Playfair Display", serif;
+}
+
+
+form {
+    margin: 20px auto;
+    font-family: "Playfair Display", serif;
+}
+
+
+input {
+    border-radius: 50px;
+}
+
+
+button {
+    border-radius: 50px;
+    background-color: #437066;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1em;
+    font-family: "Playfair Display", serif;
+}
+
+
+button:hover {
+    background-color: #2b534a;
+}
+
+
+.home_button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.home_button button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+
+.home_button img {
+    width: 7vh;
+    height: 7vh;
+}
+
+
+.gerenciar {
+    border-radius: 50px;
+    background-color: #437066;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1em;
+    font-family: "Playfair Display", serif;
+}
+
+.gerenciar:hover {
+    background-color: #2b534a;
+}

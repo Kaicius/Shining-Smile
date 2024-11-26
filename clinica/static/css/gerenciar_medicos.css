@@ -1,0 +1,97 @@
+h1 {
+    font-size: 5vw;
+    color: #437066;
+    text-align: center;
+    margin-top: 30px;
+    font-family: "Alegreya", serif;
+}
+
+th {
+    font-size: 1.3vw;
+    color: #437066;
+    font-family: "Alegreya", serif;
+}
+
+button {
+    border-radius: 50px;
+    background-color: #437066;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1em;
+    font-family: "Playfair Display", serif;
+    position: relative;
+    left: 10px;
+}
+
+
+button[type="submit"]:hover {
+    background-color: #2b534a;
+}
+
+.add-doctor {
+    border-radius: 50px;
+    background-color: #437066;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1em;
+    font-family: "Playfair Display", serif;
+    text-decoration: none;
+    position: relative;
+    top: 200px;
+    left: 530px;
+}
+
+.add-doctor:hover {
+    background-color: #2b534a;
+}
+
+.reset-password {
+    border-radius: 50px;
+    background-color: #437066;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1em;
+    font-family: "Playfair Display", serif;
+    text-decoration: none;
+    position: relative;
+    left: 10px;
+}
+
+.reset-password:hover {
+    background-color: #2b534a;
+}
+
+table {
+    position: absolute;
+    right: 35vw;
+}
+
+tr {
+    align-items: center;
+}
+
+.home_button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+
+.home_button button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+
+.home_button img {
+    width: 7vh;
+    height: 7vh;
+}

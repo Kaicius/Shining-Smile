@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d3d3d3; /* Cor de fundo geral */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form, h1 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+    font-family: "Alegreya", serif;
+}
+
+.form, label {
+    font-family: "Playfair Display", serif;
+}
+
+
+form {
+    background-color: #fff; /* Azul escuro do contêiner */
+    padding: 30px 40px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+label {
+    display: block;
+    color: black;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    background-color: #437066; /* Verde do botão */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 16px;
+    left: 10px;
+    position: relative;
+    cursor: pointer;
+    font-family: "Playfair Display", serif;
+}
+
+button:hover {
+    background-color: #005e35; /* Verde mais escuro no hover */
+}
+
+
+.home_button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+
+.home_button button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+
+.home_button img {
+    width: 7vh;
+    height: 7vh;
+}

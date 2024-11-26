@@ -1,0 +1,226 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ortodontia</title>
+    <link rel="stylesheet" href="{% static 'css/Ortodontia.css' %}">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<header>
+    <div class="wrapper">
+        <div id="sidebar">
+            <div class="d-flex">
+                <nav>
+                    {% if user.is_authenticated %}
+                      <div class="user-indicator">
+                        <button id="toggle-btn" type="button">
+                            <span class="user-initial">{{ user.first_name|default:user.username|slice:":1"|upper }}</span>
+                        </button>
+                      </div>
+                    {% endif %}
+                </nav>
+                <br>
+                <br>
+                <br>
+                <div class="sidebar-logo">
+                    <a href="{% url 'home_logado' %}">Shining Smile</a>
+                </div>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="{% url 'home_logado' %}" class="sidebar-link">
+                        <i class="lni lni-home"></i>
+                        <span>Página Inicial</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="{% url 'agendar_consulta' %}" class="sidebar-link has-dropdown collapsed">
+                        <i class="lni lni-calendar"></i>
+                        <span>Agendar</span>
+                    </a>
+                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="sidebar">
+                        <li class="sidebar-item">
+                           <a href="{% url 'agendar_consulta' %}" class="sidebar-link" class="button">Agendar</a>
+                        </li>
+                        <li class="sidebar-item">
+                           <a href="{% url 'minhas_consultas' %}" class="sidebar-link" class="button">Minhas Consultas</a>
+                        </li>
+                   </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#multi" aria-expanded="false" aria-controls="multi">
+                        <i class="lni lni-heart"></i>
+                        <span>Tratamentos</span>
+                    </a>
+                    <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="sidebar">
+                        <li class="sidebar-item">
+                            <a href="{% url 'tratamentos_logado' %}" class="sidebar-link collapsed">
+                            Todos
+                            </a>
+                            <a href="{% url 'ortodontia_logado' %}" class="sidebar-link collapsed">
+                            Ortodontia
+                            </a>
+                            <a href="{% url 'clareamento_logado' %}" class="sidebar-link collapsed">
+                            Clareamento
+                            </a>
+                            <a href="{% url 'proteses_logado' %}" class="sidebar-link collapsed">
+                            Proteses
+                            </a>
+                            </a>
+                            <a href="{% url 'implantes_logado' %}" class="sidebar-link collapsed">
+                            Implantes
+                            </a>
+                            <ul id="multi-two" class="sidebar-dropdown list-unstyled collapse">
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="sidefooter">
+                <a href="{% url 'account_logout' %}" class="sidebar-link">
+                    <i class="lni lni-exit"></i>
+                    <span>Sair</span>
+                </a>
+            </div>
+        </div>
+        </div>
+        </div>
+</header>
+
+</header>
+<style>
+    body {
+        background-color: #d9d9d9;
+    }
+    .display-4 {
+        color: #FFF;
+        font-size: 4rem; /* Aumentado */
+        font-family: "Alegreya", serif;
+    }
+    .lead {
+        color: #fff;
+        font-size: 2rem; /* Aumentado */
+        font-family: "Playfair Display", serif;
+    }
+    .section-title {
+        color: #437066;
+        font-size: 2.5rem; /* Aumentado */
+        font-family: "Alegreya", serif;
+        margin-top: 2rem;
+    }
+    .text-content {
+        font-size: 1.5rem; /* Aumentado */
+        font-family: "Playfair Display", serif;
+        line-height: 1.6;
+    }
+    .image-container img {
+        border-radius: 8px;
+        max-width: 100%;
+        height: auto;
+    }
+    .content-section {
+        min-height: 100vh;
+    }
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    
+</style>
+<body>
+    <script src="JavaScript/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Image Section with Centralized Text -->
+    <section class="image-container text-center py-1 position-relative">
+        <div class="container">
+            <div class="position-absolute top-50 start-50 translate-middle text-white text-center w-100">
+                <h2 class="display-4">Ortodontia</h2>
+                <p class="lead">Saiba como são feitos procedimentos de Ortodontia</p>
+            </div>
+            <img src="{% static 'imgs/OrtodontiaNovo.PNG' %}" alt="Ortodontia" class="img-fluid" width="100%" height="50%">
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section py-5">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <!-- Introduction -->
+            <div class="row text-center">
+                <h2 class="section-title">Ortodontia</h2>
+                <p class="text-content text-center">
+                    Quer um sorriso mais alinhado e saudável? Nossa ortodontia oferece soluções modernas e eficazes para corrigir dentes desalinhados e melhorar a sua mordida.
+                </p>
+            </div>
+
+            <!-- What is Orthodontics -->
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <h3 class="section-title">O que é Ortodontia?</h3>
+                    <p class="text-content">
+                        Ortodontia é uma especialidade dental focada na correção de dentes e mandíbulas desalinhados. Utilizamos aparelhos e técnicas avançadas para alinhar os dentes, melhorar a mordida e promover um sorriso harmonioso.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Benefits of Orthodontics -->
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <h3 class="section-title">Benefícios da Ortodontia:</h3>
+                    <ul class="text-content text-start mx-auto" style="max-width: 800px;">
+                        <li><strong>Sorriso Alinhado:</strong> Corrige dentes tortos e mordidas irregulares para um sorriso mais estético.</li>
+                        <li><strong>Melhoria Funcional:</strong> Ajuda na mastigação, fala e na saúde geral dos dentes e gengivas.</li>
+                        <li><strong>Tecnologia Avançada:</strong> Oferecemos opções de aparelhos tradicionais e invisíveis, como alinhadores transparentes.</li>
+                        <li><strong>Tratamento Personalizado:</strong> Desenvolvemos planos de tratamento adaptados às suas necessidades específicas para o máximo conforto e eficácia.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Process Section -->
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <h3 class="section-title">Como Funciona o Processo?</h3>
+                    <ul class="text-content text-start mx-auto" style="max-width: 800px;">
+                        <li><strong>Avaliação Completa:</strong> Realizamos um exame detalhado para entender suas necessidades ortodônticas.</li>
+                        <li><strong>Planejamento:</strong> Criamos um plano de tratamento personalizado, utilizando tecnologia de imagem 3D para precisão.</li>
+                        <li><strong>Tratamento:</strong> Aplicamos o aparelho ortodôntico adequado e ajustamos ao longo do tempo para alcançar os resultados desejados.</li>
+                        <li><strong>Acompanhamento:</strong> Monitoramos o progresso e ajustamos o tratamento conforme necessário para garantir o sucesso.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+<div class="Footernovo">
+    <footer>
+        <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+    </div>
+   
+    <ul class="social_icon">
+        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+    </ul>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Time</a></li>
+        <li><a href="#">Contato</a></li>
+    </ul>
+
+
+    </footer>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</html>

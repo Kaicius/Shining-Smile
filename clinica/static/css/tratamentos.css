@@ -1,0 +1,167 @@
+
+
+
+
+
+.wrapper{
+    display: flex;
+    
+}
+#sidebar{
+    width: 5.4vw;
+    height: 100%;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    background-color: #437066;
+    position: fixed;
+    border-right: solid #090707 0.2px;}
+
+    #sidebar.expand{
+        width: 18.5vw;
+    }
+
+    #toggle-btn{
+    background-color: transparent;
+        cursor: pointer;
+        border: 0;
+        padding: 1.3vw 1.7vw;
+    }
+
+    #toggle-btn i{
+        font-size : 1.8vw;
+        color: #e0f2f5;
+    }
+
+    .sidebar-logo{
+        margin:auto 0;
+
+    }
+
+    .sidebar-logo a{
+        color: #e0f2f5;
+        font-size: 1.3vw;
+        font-weight: 600;
+        text-decoration:none ;
+    }
+
+    #sidebar:not(.expand) .sidebar-logo,
+    #sidebar:not(.expand) a.sidebar-link span{
+        display: none;  
+    }
+
+    .sidebar-nav{
+        padding: 2rem 0;
+        flex: 1 1 auto;
+    }
+
+    a.sidebar-link{
+        padding: 0.7vw 1.7vw ;
+        color: #e0f2f5;
+        display: block;
+        font-size: 1.2vw;
+        white-space: nowrap;
+        border-left: 3px solid transparent;
+        text-decoration: none;
+    }
+    .sidebar-link i{
+        font-size: 1.3vw;
+        margin-right: .75rem;
+    }
+    a.sidebar-link:hover{
+        border-left: 2px solid #3586ff;
+        
+        
+    }
+
+    .sidebar-item{
+        position: relative;
+        
+    }
+
+    #sidebar:not(.expand) .sidebar-item .sidebar-dropdown{
+        position: absolute;
+        top: 0;
+        left: 5.4vw;
+        background-color: #437066;
+        padding: 0;
+        min-width: 15rem;
+        display: none;
+        
+
+    }
+
+    #sidebar:not(.expand) .sidebar-item:hover .has-dropdown+.sidebar-dropdown{
+        display: block;
+        max-height: 15em;
+        width: 100%;
+        opacity: 1;
+    
+    }
+
+    #sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after{
+        border: solid;
+        border-width: 0 .075rem  .075rem 0;
+        content: "";
+        display: inline-block;
+        padding: 0.2vw;
+        position:absolute;
+        right: 1vw;
+        top: 43%;
+        transform: rotate(-135deg);
+        transition: all .2s ease-out;
+    }
+    
+
+    #sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after{
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+    position: absolute;
+    top: 20%;
+    }
+
+   
+
+      
+
+            /* Para navegadores baseados em WebKit, como Chrome */
+    ::-webkit-scrollbar {
+        width: 10px; /* Largura da barra de rolagem */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 50px;
+        background: #437066;
+    }
+
+    html ::-webkit-scrollbar-track {
+        background: #d9d9d9;
+    }
+
+    
+
+
+
+    .user-indicator {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+    
+      .user-initial {
+        width: 30px;
+        height: 30px;
+        background-color: #000000; /* Cor de fundo da bolinha */
+        color: #fff; /* Cor do texto */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%; /* Torna o elemento circular */
+        font-weight: bold;
+        font-size: 18px;
+        z-index: 1000000000000000000000009;
+        position: absolute;
+        bottom: 52  0px;
+        left: 10px;
+      }

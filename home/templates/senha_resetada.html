@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Senha Redefinida</title>
+</head>
+<body>
+    <h2>Senha Redefinida com Sucesso</h2>
+    <p>A nova senha para {{ medico.first_name }} {{ medico.last_name }} é: <strong>{{ nova_senha }}</strong></p>
+    <a href="{% url 'gerenciar_medicos' %}">Voltar para Gerenciar Médicos</a>
+</body>
+</html>

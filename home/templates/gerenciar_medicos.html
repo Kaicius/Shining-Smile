@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Médicos</title>
+    <link rel="stylesheet" href="{% static 'css/gerenciar_medicos.css' %}">
+</head>
+<header>
+    <div class="home_button">
+        <a href="{% url 'admin_dashboard' %}">
+            <button>
+                <img src="{% static 'imgs/arrow.png' %}" alt="Home" />
+            </button>
+        </a>
+    </div>  
+</header>
+<body>
+    <h1>Gerenciar Médicos</h1>
+    <br>
+    <br>
+    <br>
+    <table>
+        <tr>
+            <th>Nome do Médico</th>
+            <th>Credencial</th>
+            <th>Ações</th>
+        </tr>
+        {% for medico in medicos %}
+            <tr>
+                <td>{{ medico.first_name }} {{ medico.last_name }}</td>
+                <td>{{ medico.username }}</td> <!-- Exibe a credencial gerada automaticamente -->
+                <td>
+                    <!-- Formulário para remover o médico -->
+                    <form method="post" action="{% url 'remover_medico' medico.id %}" style="display:inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="remove-doctor">Remover</button>
+                    </form>
+                    
+                    <!-- Link para redefinir a senha do médico -->
+                    <a href="{% url 'resetar_senha_medico' medico.id %}" class="reset-password">Redefinir Senha</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'adicionar_medico' %}" class="add-doctor">Adicionar Médico</a>
+</body>
+</html>

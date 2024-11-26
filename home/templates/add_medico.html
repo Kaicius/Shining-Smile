@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Médico</title>
+    <link rel="stylesheet" href="{% static 'css/add_medico.css' %}">
+</head>
+<header>
+    <div class="home_button">
+        <a href="{% url 'admin_dashboard' %}">
+            <button>
+                <img src="{% static 'imgs/arrow.png' %}" alt="Home" />
+            </button>
+        </a>
+    </div>  
+</header>
+<body>
+    <h1>Adicionar Novo Médico</h1>
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Cadastrar Médico</button>
+        </form>
+        <a href="{% url 'gerenciar_medicos' %}">
+            <button class="gerenciar">ir para Gerenciar Médicos</button>
+        </a>
+    </div>
+</body>
+</html>

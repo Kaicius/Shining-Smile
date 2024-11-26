@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/home_logado.css' %}">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        background-color: #d9d9d9;
+    }
+</style>
+<header>
+    <div class="wrapper">
+        <div id="sidebar">
+            <div class="d-flex">
+                <nav>
+                    {% if user.is_authenticated %}
+                      <div class="user-indicator">
+                        <button id="toggle-btn" type="button">
+                            <span class="user-initial">{{ user.first_name|default:user.username|slice:":1"|upper }}</span>
+                        </button>
+                      </div>
+                    {% endif %}
+                </nav>
+                <br>
+                <br>
+                <br>
+                <div class="sidebar-logo">
+                    <a href="{% url 'home_logado' %}">Shining Smile</a>
+                </div>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="{% url 'home_logado' %}" class="sidebar-link">
+                        <i class="lni lni-home"></i>
+                        <span>Página Inicial</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="{% url 'agendar_consulta' %}" class="sidebar-link has-dropdown collapsed">
+                        <i class="lni lni-calendar"></i>
+                        <span>Agendar</span>
+                    </a>
+                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="sidebar">
+                        <li class="sidebar-item">
+                           <a href="{% url 'agendar_consulta' %}" class="sidebar-link" class="button">Agendar</a>
+                        </li>
+                        <li class="sidebar-item">
+                           <a href="{% url 'minhas_consultas' %}" class="sidebar-link" class="button">Minhas Consultas</a>
+                        </li>
+                   </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#multi" aria-expanded="false" aria-controls="multi">
+                        <i class="lni lni-heart"></i>
+                        <span>Tratamentos</span>
+                    </a>
+                    <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="sidebar">
+                        <li class="sidebar-item">
+                            <a href="{% url 'tratamentos_logado' %}" class="sidebar-link collapsed">
+                            Todos
+                            </a>
+                            <a href="{% url 'ortodontia_logado' %}" class="sidebar-link collapsed">
+                            Ortodontia
+                            </a>
+                            <a href="{% url 'clareamento_logado' %}" class="sidebar-link collapsed">
+                            Clareamento
+                            </a>
+                            <a href="{% url 'proteses_logado' %}" class="sidebar-link collapsed">
+                            Proteses
+                            </a>
+                            </a>
+                            <a href="{% url 'implantes_logado' %}" class="sidebar-link collapsed">
+                            Implantes
+                            </a>
+                            <ul id="multi-two" class="sidebar-dropdown list-unstyled collapse">
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="sidefooter">
+                <a href="{% url 'account_logout' %}" class="sidebar-link">
+                    <i class="lni lni-exit"></i>
+                    <span>Sair</span>
+                </a>
+            </div>
+        </div>
+        </div>
+        </div>
+</header>
+<body>
+    <script src="JavaScript/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+
+
+       <img src="{% static 'imgs/VouTentar.PNG' %}" class="Grande3213">
+
+       <div class="ClareDTe">
+        <p>Bem-vindo à Clínica Odontológica    </p>
+       </div>
+       <img src="{% static 'imgs/upT.PNG' %}" width="1150vh" class="Card" usemap="#test">
+       <map name="test">
+        <area shape="rect" coords="560,195,950,150" href="{% url 'agendar_consulta' %}">
+       </map>
+
+
+
+       <div class="NovoPaciente">
+        <div class="tudin">
+        <div class="quadradosn"><h1>Cadastre-se aqui!</h1><p>Preencha o formulário com seus dados<br> para agilizar o seu atendimento.<br> Dados como nome, CPF, telefone<br> e endereço são essenciais</p></div>
+        <div class="quadradosn2"><h1>Já é cadastrado?</h1><p>Faça o login para ter acesso a ações<br> como agendamento, encaixe <br>e contato com os médicos.</p></div>
+        <div class="quadradosn3"><h1>Atendimento Personalizado</h1><p>Oferecemos um atendimento<br> personalizado para cade paciente,<br>garantindo o melhor tratamento<br> para suas necessidades individuais.</p></div>
+        </div>
+        </div>
+
+
+
+          <div class="oferecidos d-flex justify-content-end align-items-end">
+        <img src="{% static 'imgs/Vpd.PNG' %}" alt="Imagem" class="img-fluid w-100" style="max-width: 1150px;">
+    </div>
+
+
+</body>
+<div class="Footernovo">
+    <footer>
+    <ul class="social_icon">
+        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+    </ul>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+
+        <li><a href="#">Contato</a></li>
+    </ul>
+
+
+    </footer>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</div>
+</html>

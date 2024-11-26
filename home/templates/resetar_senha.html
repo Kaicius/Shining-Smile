@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Redefinir Senha</title>
+</head>
+<body>
+    <h2>Redefinir Senha para {{ medico.first_name }} {{ medico.last_name }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="nova_senha">Nova Senha (ou deixe em branco para gerar automaticamente):</label>
+        <input type="text" id="nova_senha" name="nova_senha">
+        <button type="submit">Redefinir Senha</button>
+    </form>
+</body>
+</html>
