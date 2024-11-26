@@ -1,3 +1,3 @@
-Projeto Clinica
+Projeto de uma clinica de odontologia
 
-Feito em 2024 como projeto final da turma de DEV da escola SENAI Morvan Figueiredo.
+Realizado em 2024 como projeto final da turma de DEV da escola SENAI Morvan Figueiredo.
