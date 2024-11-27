@@ -154,8 +154,8 @@ SOCIALACCOUNT_PROVIDERS = {
     "google": {
         "APPS": [
             {
-                "client_id": "638419883918-egihn018lqr44aqpbhh6mrt9pg5f06b3.apps.googleusercontent.com",
-                "secret": "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",
+                "client_id": "SEU_CLIENT_ID",
+                "secret": "SEU_SECRET",
                 "key": ""
             },
         ],
