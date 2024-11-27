@@ -3,7 +3,7 @@
 ### Este projeto foi desenvolvido como trabalho final da turma de Desenvolvimento de Sistemas da escola SENAI Morvan Figueiredo em 2024.
 __________________________________
 ## 💡 Sobre o projeto
-O sistema é voltado para a gestão de uma clínica de odontologia, com algumas funcionalidades, durante 2 anos de curso com novas experiencias nos codigos durante os semestres e ao começo do 4° semestre foi começado esse projeto e ao fim do 4° semestre ele foi finalizado e apresentado.
+O sistema foi desenvolvido para a gestão de uma clínica de odontologia, incorporando diversas funcionalidades. Durante dois anos de curso, novas experiências foram adquiridas no desenvolvimento de códigos ao longo dos semestres. No início do 4º semestre, o projeto foi iniciado e, ao final desse mesmo semestre, foi concluído e apresentado.
 __________________________________
 ## ⚙️ Requisitos
 Para ver os requisitos clique no link abaixo:
