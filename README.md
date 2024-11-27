@@ -33,7 +33,7 @@ __________________________________
 
 ### Clone este repositório:
 
-``` git clone https://github.com/seu-usuario/nome-do-repositorio.git ```
+``` git clone https://github.com/Kaicius/Shining-Smile.git ```
 
 ### Instale as dependências:
 
