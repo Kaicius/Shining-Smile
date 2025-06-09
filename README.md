@@ -50,9 +50,3 @@ __________________________________
 ### Acesse o sistema no navegador pelo endereço: http://127.0.0.1:8000
 
 ## Para fazer o login do google funcionar acesse o [console](https://console.cloud.google.com/projectselector2/apis/credentials?hl=pt-br&authuser=4&supportedpurview=project) crie a credencial e a tela de permissão OAuth e substitua os campos nas settings.py
-__________________________________
-## 🤝 Contribuições
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request com melhorias ou correções.
-__________________________________
-## 👨‍👩‍👧‍👦 Colaboradores
-Os colaboradores do projeto são os membros do grupo que realizaram esse projeto em 2024
