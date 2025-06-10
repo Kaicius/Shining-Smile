@@ -9,6 +9,8 @@ __________________________________
 Para ver os requisitos clique no link abaixo:
 <br><br>
 [Requisitos](https://github.com/Kaicius/Shining-Smile/blob/main/Requirements.txt)
+
+PROJETO FEITO EM Python==2.17.7
 __________________________________
 ## 🛠️ Tecnologias utilizadas
 #### - Django: Framework principal para backend.
